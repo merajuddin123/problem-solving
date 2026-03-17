@@ -1,0 +1,31 @@
+//Printing Second Highest Salary among Employees
+import java.util.*;
+import java.util.stream.*;
+class Employee{
+    String name;
+    int salary;
+    public String department;
+    Employee(String name, int salary, String department){
+        this.name=name;
+        this.salary=salary;
+        this.department=department;
+    }
+    @Override
+    public String toString()
+    { return name+" "+salary+" "+department;}
+}
+class Main {
+    public static void main(String[] args) {
+        List<Employee> emp=Arrays.asList(
+            new Employee("Meraj", 2000, "English"),
+            new Employee("Surash", 1000, "Math"),
+            new Employee("Zain", 6000, "English"),
+            new Employee("Khalid", 5000, "Math"),
+            new Employee("Harish", 3000, "Urdu")
+            );
+       getsecondHighestSalary(emp);     
+    }
+    public static void getsecondHighestSalary(List<Employee> emp){
+       Optional<Employee> n =emp.stream().sorted((e2,e1)->Integer.compare(e1.salary,e2.salary)).skip(1).findFirst();
+      System.out.println(n);}
+}
