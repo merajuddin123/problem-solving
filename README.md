@@ -1,4 +1,5 @@
-# Problem Solving in Java
+# stream-api-coding-challenges
 
-This repository contains my solutions to various coding challenges (LeetCode, HackerRank, GeeksforGeeks, etc.) written in Java.  
-It demonstrates my problem-solving skills, algorithmic thinking, and consistent practice.
+This repository showcases my solutions to coding challenges solved using Java Stream API.  
+It highlights practical applications such as filtering, grouping, and sorting data.  
+The goal is to demonstrate strong problem-solving ability, clean coding practices, and consistent interview-oriented preparation.
