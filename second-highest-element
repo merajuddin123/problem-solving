@@ -1,0 +1,18 @@
+// Find second highest element using Stream
+import java.util.*;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+        
+        
+        List<Integer> li= Arrays.asList(2,3,4,5,67,2);
+        System.out.println(secondHighest(li));
+        
+    }
+    public static Optional<Integer> secondHighest(List<Integer> li)
+    {   
+        Optional<Integer> n= li.stream().sorted((e2,e1)->Integer.compare(e1,e2)).skip(1).findFirst();
+        return n;
+        
+    }
+}
