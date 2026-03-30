@@ -1,0 +1,20 @@
+// Filter Even and odd using Stream API
+import java.util.*;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+        
+        
+        List<Integer> li= Arrays.asList(2,3,4,5,67,2);
+        evenodd(li);
+        
+    }
+    public static void evenodd(List<Integer> li)
+    {   
+        Map<Boolean, List<Integer>> mp= li.stream().collect(Collectors.partitioningBy(n->n%2==0));
+        
+        System.out.println("Even"+ mp.get(true));
+        System.out.println("Odd"+ mp.get(false));
+        
+    }
+}
