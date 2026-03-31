@@ -1,0 +1,18 @@
+//Find a vowel from a string using stream api
+import java.util.*;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+        
+        
+        List<Character> li= Arrays.asList('a','b','i','d','o','t','u');
+        System.out.println(printVowel(li));
+        
+    }
+    public static List<Character> printVowel(List<Character> li)
+    {   List<Character> vowels= Arrays.asList('a','b','i','d','o','t','u', 'A', 'E','I','O', 'U');
+        return li.stream().filter(n->vowels.contains(n)).collect(Collectors.toList());
+    
+        
+    }
+}
