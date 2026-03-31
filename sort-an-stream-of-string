@@ -1,0 +1,18 @@
+// sort an stream of string
+import java.util.*;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+        
+        
+        List<String> li= Arrays.asList("aa", "bb", "ccd");
+        System.out.println(sortingString(li));
+        
+    }
+    public static List<String> sortingString(List<String> li)
+    {   
+        List<String> n= li.stream().sorted((e1,e2)-> e1.compareTo(e2)).collect(Collectors.toList());
+        return n;
+        
+    }
+}
