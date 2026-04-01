@@ -1,0 +1,35 @@
+//Group the Employee by Department
+import java.util.*;
+import java.util.stream.*;
+class Employee{
+    String name;
+    int salary;
+    String department;
+    Employee(String name, int salary, String department)
+    {
+        this.name=name;
+        this.salary=salary;
+        this.department=department;
+    }
+     
+    public String toString() {
+        return name + " : " + salary;
+    }
+    
+}
+class Main {
+    public static void main(String[] args) {
+        List<Employee> emp= Arrays.asList(
+            new Employee("Meraj", 2000, "Math"),
+            new Employee("Zara", 4000, "Hindi"),
+            new Employee("Bilal", 6000, "Math"),
+            new Employee("Ahmad", 1000, "Hindi"));
+        
+        System.out.println(groupEmployeeByDepartment(emp));
+        
+    }
+    public static Map<String, List<Employee>> groupEmployeeByDepartment(List<Employee> li)
+    {    return li.stream().collect(Collectors.groupingBy(n->n.department));
+        
+    }
+}
